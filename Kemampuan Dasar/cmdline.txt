@@ -1,0 +1,280 @@
+PERINTAH MELALUI COMMAND LINE/SHELL
+
+    • Guru99
+        1. Listing files
+           Untuk melihat daftar file di sistem linux menggunakan perintah:
+           
+           ls
+           
+           Desktop    env               Music      nisa      Templates  yohoo
+           Documents  env.save          nano.save  Pictures  test
+           Downloads  karnel-linux.txt  nis        Public    Videos
+           
+           untuk melihat Subdirektori:
+           
+           ls -R
+           
+Desktop    env               Music      nisa      Templates  yohoo
+Documents  env.save          nano.save  Pictures  test
+Downloads  karnel-linux.txt  nis        Public    Videos
+
+./Desktop:
+
+./Documents:
+
+./Downloads:
+code_1.66.0-1648620611_amd64.deb
+
+./env:
+env.txt
+
+./karnel-linux.txt:
+karnel
+
+./Music:
+
+./nis:
+
+./nisa:
+
+./Pictures:
+
+./Public:
+
+./Templates:
+
+./test:
+test.html
+
+./Videos:
+
+./yohoo:
+env.txt..odt
+Untuk mencari informasi rinci tentang file:
+
+ls -al
+
+total 164
+drwxr-xr-x 26 nisa nisa 4096 Apr  5 11:54 .
+drwxr-xr-x  3 root root 4096 Apr  4 19:00 ..
+-rw-------  1 nisa nisa 1206 Apr  5 13:47 .bash_history
+-rw-r--r--  1 nisa nisa  220 Apr  4 19:00 .bash_logout
+-rw-r--r--  1 nisa nisa 3771 Apr  4 19:00 .bashrc
+drwx------  9 nisa nisa 4096 Apr  4 13:55 .cache
+drwxrwxr-x  4 nisa nisa 4096 Apr  5 02:08 .cinnamon
+drwxr-xr-x 18 nisa nisa 4096 Apr  5 11:45 .config
+drwxr-xr-x  2 nisa nisa 4096 Apr  5 02:08 Desktop
+-rw-r--r--  1 nisa nisa   27 Apr  5 02:08 .dmrc
+drwxr-xr-x  2 nisa nisa 4096 Apr  4 21:28 Documents
+drwxr-xr-x  2 nisa nisa 4096 Apr  4 14:48 Downloads
+drwxrwxr-x  2 nisa nisa 4096 Apr  5 11:24 env
+-rw-rw-r--  1 nisa nisa 2250 Apr  5 11:28 env.save
+drwx------  3 nisa nisa 4096 Apr  5 02:08 .gnupg
+-rw-r--r--  1 nisa nisa   22 Apr  4 19:00 .gtkrc-2.0
+-rw-r--r--  1 nisa nisa  516 Apr  4 19:00 .gtkrc-xfce
+drwxrwxr-x  2 nisa nisa 4096 Apr  5 11:54 karnel-linux.txt
+drwxrwxr-x  4 nisa nisa 4096 Apr  5 10:16 .linuxmint
+drwxrwxr-x  3 nisa nisa 4096 Apr  5 02:08 .local
+drwx------  4 nisa nisa 4096 Apr  5 02:09 .mozilla
+drwxr-xr-x  2 nisa nisa 4096 Apr  5 02:08 Music
+-rwxrwxr-x  1 nisa nisa 2252 Apr  5 11:50 nano.save
+drwxrwxr-x  2 nisa nisa 4096 Apr  5 11:18 nis
+drwxrwxr-x  2 nisa nisa 4096 Apr  5 11:10 nisa
+drwxr-xr-x  2 nisa nisa 4096 Apr  5 02:08 Pictures
+drwx------  3 nisa nisa 4096 Apr  4 14:52 .pki
+-rw-r--r--  1 nisa nisa  807 Apr  4 19:00 .profile
+drwxr-xr-x  2 nisa nisa 4096 Apr  5 02:08 Public
+-rw-r--r--  1 nisa nisa    0 Apr  4 14:22 .sudo_as_admin_successful
+drwxr-xr-x  2 nisa nisa 4096 Apr  5 02:08 Templates
+drwxrwxr-x  2 nisa nisa 4096 Apr  4 15:02 test
+drwxr-xr-x  2 nisa nisa 4096 Apr  5 02:08 .themes
+drwxr-xr-x  2 nisa nisa 4096 Apr  5 02:08 Videos
+drwxrwxr-x  3 nisa nisa 4096 Apr  4 14:52 .vscode
+-rw-------  1 nisa nisa   52 Apr  5 10:21 .Xauthority
+-rw-------  1 nisa nisa 8302 Apr  5 13:32 .xsession-errors
+-rw-------  1 nisa nisa 8115 Apr  5 10:00 .xsession-errors.old
+drwxrwxr-x  2 nisa nisa 4096 Apr  5 10:31 yohoo
+
+       2.   Listing Hidden Files
+
+Untuk mengetahui file yang disembunyikan:
+
+ls -a
+
+.              Documents         .mozilla                   Templates
+..             Downloads         Music                      test
+.bash_history  env               nano.save                  .themes
+.bash_logout   env.save          nis                        Videos
+.bashrc        .gnupg            nisa                       .vscode
+.cache         .gtkrc-2.0        Pictures                   .Xauthority
+.cinnamon      .gtkrc-xfce       .pki                       .xsession-errors
+.config        karnel-linux.txt  .profile                   .xsession-errors.old
+Desktop        .linuxmint        Public                     yohoo
+.dmrc          .local            .sudo_as_admin_successful
+
+3.    Creating and Viewing files
+
+Untuk membuat file
+
+cat > sample1
+hasil:
+ Desktop     hasilclone  'PRAXIS ACADEMY'   Templates   Videos
+ Documents   Music        Public            test
+ Downloads   Pictures     sample1           token.txt
+
+cat > sample2
+hasil:
+Desktop     hasilclone  'PRAXIS ACADEMY'   sample2     token.txt
+ Documents   Music        Public            Templates   Videos
+ Downloads   Pictures     sample1           test
+
+Untuk menggabungkan  2 file menjadi satu
+
+cat sample1 sample2 > sample
+this is sample1
+this is sample2
+
+hasil:
+Desktop     hasilclone  'PRAXIS ACADEMY'   sample1     test
+ Documents   Music        Public            sample2     token.txt
+ Downloads   Pictures     sample            Templates   Videos
+
+       4.    Deleting Files
+       
+Untuk menghapus gunakan
+
+rm sample1
+hasil:
+ Desktop     hasilclone  'PRAXIS ACADEMY'   sample2     token.txt
+ Documents   Music        Public            Templates   Videos
+ Downloads   Pictures     sample            test
+
+5.    Moving and Re-naming Files
+
+Untuk memindahkan file:
+mv sample2 /home/nisa/guru99
+
+untuk mengganti nama file:
+mv
+
+6. Manipulasi Direktori
+
+mkdir /tmp/music
+
+Untuk melihat hasil manipulasi:
+ls /tmp
+config-err-fqTFlr
+hsperfdata_nisa
+lu2420mxp9wj.tmp
+mintUpdate
+MozillaUpdateLock-4F96D1932A9F858E
+music
+OSL_PIPE_1000_SingleOfficeIPC_919c87a746b4853dbdbf43254b6f9e3
+ssh-qqgA8JO6xzHn
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-colord.service-peZwCh
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-ModemManager.service-noiIQf
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-systemd-logind.service-wW0iyi
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-systemd-resolved.service-pjxYLg
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-systemd-timesyncd.service-OxaM3h
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-upower.service-2dFRyg
+Temp-128831ec-ea86-406b-844e-505c9576cb8econfig-err-fqTFlr
+hsperfdata_nisa
+lu2420mxp9wj.tmp
+mintUpdate
+MozillaUpdateLock-4F96D1932A9F858E
+music
+OSL_PIPE_1000_SingleOfficeIPC_919c87a746b4853dbdbf43254b6f9e3
+ssh-qqgA8JO6xzHn
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-colord.service-peZwCh
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-ModemManager.service-noiIQf
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-systemd-logind.service-wW0iyi
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-systemd-resolved.service-pjxYLg
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-systemd-timesyncd.service-OxaM3h
+systemd-private-f19be7dbd867442c89d53f9c61bf668b-upower.service-2dFRyg
+Temp-128831ec-ea86-406b-844e-505c9576cb8e
+
+7.    Removing Directories
+
+Untuk menghapus direktori
+
+rmdir guru
+
+8.   Renaming Directory
+
+
+untuk mengganti nama direktori:
+mv hasilclone clone
+
+9.   Other Important Commands
+The ‘Man’ command
+
+“man” adalah singkatan dari manual merupakan buku referensi dari sistem operasi linux. Sama halnya dengan help yang ditemukan diperangkat lunak populer. Dan untuk mendapatkan bantuan:
+man man
+Hasil:
+AN(1)                        Manual pager utils                        MAN(1)
+
+NAME
+       man - an interface to the system reference manuals
+
+SYNOPSIS
+       man [man options] [[section] page ...] ...
+       man -k [apropos options] regexp ...
+       man -K [man options] [section] term ...
+       man -f [whatis options] page ...
+       man -l [man options] file ...
+       man -w|-W [man options] page ...
+
+DESCRIPTION
+       man  is  the system's manual pager.  Each page argument given to man is
+       normally the name of a program, utility or function.  The  manual  page
+       associated with each of these arguments is then found and displayed.  A
+       section, if provided, will direct man to look only in that  section  of
+       the  manual.   The  default action is to search in all of the available
+       sections following a pre-defined order (see DEFAULTS), and to show only
+       the first page found, even if page exists in several sections.
+
+       The table below shows the section numbers of the manual followed by the
+ Manual page man(1) line 1 (press h for help or q to quit)
+
+10.   The History Command
+Untuk melihat  history yang pernah kita cari di terminal mengunakan:
+history
+Hasil yang keluar:
+  1  sudo snap install --classic code
+    2  sudo apt update
+    3  <sudo snap install --classic code
+    4  sudo apt is is tall
+    5  sudo apt install
+    6  <sudo snap install --classic code
+    7  sudo snap install code
+    8  sudo snap install --classic code
+    9  sudo apt upgrade
+   10  /etc/X11/default-display-manager
+   11  mkdir test
+   12  mkdir yohoo
+   13  cd yohoo
+   14  grep '/usr/s\?bin' /etc/systemd/system/display-manager.service
+   15  /etc/X11/default-display-manager
+   16  /etc/sysconfig/desktop
+   17  ExecStart=/usr/bin/mdm
+   18  grep '/usr/s\?bin' /etc/systemd/system/display-manager.service
+   19  systemctl status display-manager
+   20  wmctrl -m
+   21  echo $XDG_CURRENT_DESKTOP
+   22  cd yohoo
+   23  code .
+   24  wmctrl -m
+   25  echo $XDG_CURRENT_DESKTOP
+   26  sudo apt install screenfetch
+   27  mkdir env.txt
+   28  nano env.txt
+   29  mkdir nisa
+   30  nano
+   31  mkdir nis
+   32  nano env.txt
+   33  XDG_CURRENT_DESKTOP=GNOME
+   34  GDMSESSION=cinnamon
+   35  wmctrl -m
+   36  echo "$SHELL"
+
+
