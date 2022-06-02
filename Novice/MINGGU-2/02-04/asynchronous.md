@@ -40,3 +40,7 @@ Sebenarnya kita bisa aja tidak membuat funtion baru dan diganti dengan anonymous
             }
 
             tampilkanPesan(nama => alert(`Halo, ${nama}`));
+
+2. Asyncrhonous Callback
+
+
