@@ -1,5 +1,5 @@
 import React from 'react'
-import { RiCloseCircleLine } from "react-icons/ri"
+import { MdDeleteForever } from "react-icons/md"
 import { BiCheckCircle } from "react-icons/bi"
 
 export default function TodoItem(props) {
@@ -9,7 +9,7 @@ export default function TodoItem(props) {
             {todo.text}
             <div className="iconsContainer">
                 <button onClick={() => importantTodo(todo.id)} className="important-btn">!</button>
-                <RiCloseCircleLine style={{ marginRight: 5 }} onClick={() => removeTodo(todo.id)}/>
+                <MdDeleteForever style={{ marginRight: 5 }} onClick={() => removeTodo(todo.id)}/>
                 <BiCheckCircle onClick={() => completeTodo(todo.id)}/>
             </div>
         </div>
